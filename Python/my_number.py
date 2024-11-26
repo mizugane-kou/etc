@@ -26,7 +26,7 @@ def find_string_positions(text, search_string, context_length=10):
     return results
 
 
-# テスト用
+# メイン
 if __name__ == "__main__":
     # test.txt を読み込む
     try:
