@@ -8,7 +8,7 @@ from pytoshop import layers
 import numpy as np
 from PIL import Image
 from datetime import datetime
-import pykakasi  # 日本語をローマ字に変換するライブラリ
+import pykakasi
 
 
 def get_max_image_size(folder_path):
@@ -31,6 +31,7 @@ def get_max_image_size(folder_path):
 
     return W, H
 
+
 def convert_to_romaji(text):
 
     kakasi = pykakasi.kakasi()
@@ -40,6 +41,7 @@ def convert_to_romaji(text):
     kakasi.setMode("r", "Hepburn")  # ヘボン式ローマ字を使用
     converter = kakasi.getConverter()
     return converter.do(text)
+
 
 def main(folder_path):
     # 親フォルダのパスを取得
@@ -106,6 +108,7 @@ def main(folder_path):
     # 書き出し
     with open(output_filename, 'wb') as fd2:
         psd.write(fd2)
+
 
 if __name__ == '__main__':
     import sys
