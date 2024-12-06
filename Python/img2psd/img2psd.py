@@ -12,12 +12,7 @@ import pykakasi  # 日本語をローマ字に変換するライブラリ
 
 
 def get_max_image_size(folder_path):
-    """
-    フォルダ内の画像ファイルの縦横サイズの最大値を取得する関数。
-    
-    :param folder_path: 画像ファイルが格納されているフォルダのパス
-    :return: 最大幅(W)と最大高さ(H)
-    """
+
     heights = []
     widths = []
 
@@ -36,13 +31,8 @@ def get_max_image_size(folder_path):
 
     return W, H
 
-
 def convert_to_romaji(text):
-    """
-    日本語が含まれる場合、ローマ字に変換する。
-    :param text: 入力文字列
-    :return: ローマ字に変換した文字列
-    """
+
     kakasi = pykakasi.kakasi()
     kakasi.setMode("H", "a")  # ひらがなをローマ字に変換
     kakasi.setMode("K", "a")  # カタカナをローマ字に変換
