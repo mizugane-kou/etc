@@ -234,7 +234,7 @@ async def generate_graph(user_name):
     hours = range(24)
     bar_width = 0.4  # 棒の幅
     plt.bar([h - bar_width / 2 for h in hours], sleep_hour_distribution, bar_width, color='skyblue', label='睡眠時刻', alpha=0.7)
-    plt.bar([h + bar_width / 2 for h in hours], wake_hour_distribution, bar_width, color='red', label='起床時刻', alpha=0.7)
+    plt.bar([h + bar_width / 2 for h in hours], wake_hour_distribution, bar_width, color='salmon', label='起床時刻', alpha=0.7)
     plt.xticks(hours)
     plt.xlabel('時刻（時）')
     plt.ylabel('頻度')
